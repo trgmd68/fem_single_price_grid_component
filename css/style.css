@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: hsl(218, 22%, 67%);
+  --clr-secondary: hsl(179, 62%, 43%);
+  --clr-blend: hsl(179, 47%, 51%);
+  --clr-accent: hsl(71, 73%, 54%);
+  --clr-neutral: hsl(204, 43%, 93%);
+
+  --fs-200: 0.875rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.25rem;
+  --fs-650: 1.5rem;
+  --fs-700: 2rem;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --ff-primary: "Karla", sans-serif;
+
+  --lh-600: 1.25rem;
+  --lh-700: 1.625rem;
+
+  font-size: var(--fs-body);
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-neutral);
+}
+
+.container {
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 40rem;
+}
+
+section {
+  padding: 1.5rem;
+}
+
+.join {
+  background-color: white;
+  flex: 1 1 100%;
+}
+
+.join__title {
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--fs-600), 0.890625rem + 1.5625vw, var(--fs-650));
+  color: var(--clr-secondary);
+}
+
+.join__subtitle {
+  font-weight: var(--fw-bold);
+  font-size: clamp(var(--fs-300), 0.66796875rem + 1.171875vw, var(--fs-500));
+  color: var(--clr-accent);
+}
+
+.join__text {
+  font-weight: var(--fw-regular);
+  font-size: clamp(var(--fs-200), 0.640625rem + 0.78125vw, var(--fs-400));
+  line-height: var(--lh-700);
+  color: var(--clr-primary);
+}
+
+.subscription {
+  background-color: var(--clr-secondary);
+}
+
+.subscription__title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-500);
+  color: white;
+  opacity: 0.75;
+}
+
+.subscription__price {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-700);
+  color: white;
+}
+
+.subscription__price--normal {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+  color: white;
+  opacity: 0.5;
+}
+
+.subscription__text {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+  color: white;
+  opacity: 0.75;
+}
+
+.why {
+  background-color: var(--clr-blend);
+}
+
+.why__title {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-500);
+  color: white;
+}
+
+h1,
+p {
+  margin-bottom: 1rem;
+}
+
+span {
+  margin-left: 1rem;
+}
+
+ul {
+  list-style: none;
+  color: white;
+  opacity: 0.75;
+  font-size: var(--fs-200);
+  line-height: var(--lh-600);
+}
+
+.col-lg {
+  flex: 1 1 100%;
+}
+
+.btn {
+  background-color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-400);
+  color: white;
+  margin-top: 2rem;
+  padding-block: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 40rem) {
+  .col-lg {
+    flex: 1 1 50%;
+  }
+}
